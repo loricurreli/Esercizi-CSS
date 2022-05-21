@@ -1,0 +1,138 @@
+<head>
+	<title>Esercizio 8 HTML</title>
+	<meta name="author" content="Lorenzo Curreli">
+    <meta name="description" content="esercizio 8 HTML">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        section{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        header, main{
+            max-width: 400px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            border: 1px solid grey;
+            border-bottom: none;
+            width: auto;
+        }
+
+        footer{
+            max-width: 400px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            gap: 20px;
+            border: 1px solid grey;
+            width: auto;
+
+        }
+
+        img{
+
+            width: 100%;
+            grid-row: 1;
+            grid-column: 1;
+        }
+
+        h2{
+            grid-row: 2;
+            grid-column: 1;
+            padding: 0 0 0 5px;
+        }
+        .p_header{
+            grid-column: 1;
+            padding: 2%;
+        }
+
+        main{
+            gap: 0;
+        }
+        .p_main{
+            grid-column: 1;
+            padding: 2%;
+            border-bottom: 1px solid grey;
+            height: 30px;
+            
+            
+        }
+
+        a:first-of-type{
+            grid-column: 1;
+            grid-row: 1;
+            padding: 2%;
+        }
+        a:nth-of-type(2){
+            grid-column: 2;
+            grid-row: 1;
+            padding: 2%;
+        }
+
+        @media screen and (max-width: 500px){
+
+            header,main,footer{
+                min-width: 220px;
+                margin: auto;
+            }
+            
+        }
+        @media screen and (min-width: 570px){
+            img{
+                height: fit-content;
+            }
+
+        }
+        
+
+
+        @media screen and 
+
+
+    </style>
+    
+</head>
+
+<body>
+
+    <section>
+
+        <header>
+            <img src="imagecap.png"  height="140" alt="Icona della card">
+            <h2>Card Title</h2>
+            <p class="p_header">Some quick example text to build on the card title and make up the bulk of the card's content.</p>               
+        </header>
+                  
+                
+             
+        <main>
+
+            <p class="p_main">An item</p>
+            <p class="p_main">A second item</p>          
+            <p class="p_main">A third item</p>
+                
+            
+       </main>
+       
+       <footer>
+           <a href="#">Card Link</a>
+           <a href="#">Another Link</a>
+       </footer>
+       
+    </section>
+   
+</body>
+
+</html>
