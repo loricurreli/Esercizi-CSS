@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-areas: 
+    "green_block green_block green_block"
+    "yellow_block red_block blue_block"
+    "orange_block orange_block blue_block";
+}
+
+#green{
+  grid-area: green_block;
+}
+
+#yellow{
+    grid-area: yellow_block;
+}
+
+#red{
+    grid-area: red_block;
+}
+
+#orange{
+    grid-area: orange_block;
+}
+
+#blue{
+    grid-area: blue_block;
+}
+
+ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
