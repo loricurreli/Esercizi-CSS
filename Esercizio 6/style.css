@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: grid;
+    grid-template-columns: [col1] 80px [col2] 60px [col3] 50px [col4] 120px [five] 100px [six] 260px [hamburger] 30px;
+    gap: 15px;
+    align-items: center;
+    background-color: rgb(58, 50, 50);
+    color: white;
+    height: 60px;
+    font-size: 23px;
+    padding-left: 15px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+#cars, button{
+    border-style: none;
+    background-color: rgb(58, 50, 50);
+    color: white;
+    font-size: 20px;
+}
+
+button{
+    color: rgb(120, 117, 117);
+    margin-left: 0;
+}
+
+form input{
+    height: 48px;
+    border-radius: 5px;
+    border-style: none;
+    color: gray;
+}
+
+form input:nth-of-type(2){
+    border: 3px solid green;
+    padding: 10px;
+    background-color: rgb(58, 50, 50);
+    color: green;
+    font-size: 18px;
+}
+
+form input:nth-of-type(2):hover{
+    
+    background-color: green;
+    color: white;
+}
+
+/*hamburger menu*/
+button img{
+    background-color: white;
+    display: none;
+}
+
+
+
+/*Nascondo gli elementi in più e ridisegno il layout, mostrando il menù */
+@media screen and (max-width: 768px) {
+
+    
+    .hide-768{
+        display: none;
+        
+    }
+    nav{
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: right;
+        width: auto;
+        padding-right: 15px;
+        min-width: 150px;
+    }
+    button img{
+        display: inline-block;
+    }
+    p{
+        justify-self: left;
+    }
+}
