@@ -1,0 +1,141 @@
+*{
+    box-sizing: border box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*contenitore della singola card*/
+.card_total{
+
+    min-width: 150px;
+    max-width: 337px;
+    padding-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    box-shadow: 0 3px #c7c7c7;
+    
+}
+
+
+/*contenitore intestazione singola card*/
+.card_header{
+    padding: 4px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: grey;
+    min-width: 150px;
+    max-width: 337px;
+    width: auto;
+    grid-template-areas: 
+    "foto dati dati dati dati opzioni"
+    
+}
+
+
+
+.profile{
+    grid-area: foto;
+    background-color: white;
+    border-radius: 100px;
+    width: 42px;
+}
+p:nth-of-type(2){
+    grid-area: dati;
+}
+
+span{
+    color: white;
+}
+
+.options
+{
+    grid-area: opzioni;
+    font-size: 30px;
+    text-align: right;
+    background-color: grey;
+    border: none;
+}
+
+
+/*seconda parte della singola card*/
+.card{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    min-width: 150px;
+    max-width: 337px;
+    width: auto;
+    grid-template-areas: 
+    "foto foto foto foto foto foto"
+    "like commento . . . ."
+    "testo testo testo testo testo testo"
+    
+}
+.card img:first-of-type{
+    grid-area: foto;
+    padding-bottom: 20px;
+}
+
+.card img:nth-of-type(2){
+    grid-area: like;
+    padding-left: 20px;
+}
+.card img:nth-of-type(3){
+    grid-area: commento;
+    padding-left: 10px;
+    max-width: 150px;
+}
+.card p{
+    grid-area: testo;
+    padding: 20px 0 0 4px;
+    text-align: justify;
+}
+
+.card img:first-of-type{
+    width: 100%;
+    height: auto;
+}
+
+/*contenitore di tutte le card*/
+.conteiner{
+    display: grid;
+    grid-template-areas: "card1 card2 card3";
+}
+
+.card_total:first-of-type{
+    grid-area: card1;
+}
+
+.card_total:nth-of-type(2){
+    grid-area: card2;
+}
+
+.card_total:nth-of-type(3){
+    grid-area: card3;
+}
+
+
+/*tablet*/
+@media screen and (max-width: 768px)  {
+    .conteiner{
+        display: grid;
+        grid-template-areas: "card1 card2"
+                             "card3 .";
+        row-gap: 20px;
+    }
+}
+
+
+/*mobile*/
+@media screen and (max-width: 375px)  {
+    .conteiner{
+        display: grid;
+        grid-template-areas: "card1"
+                             "card2"
+                             "card3";
+     row-gap: 20px;
+    }
+}
+
