@@ -1,1 +1,1 @@
-Esercizi CSS di Lorenzo Curreli
+Esercizi relatvi al modulo CSS svolti durante il corso in Develhope di Lorenzo Curreli
